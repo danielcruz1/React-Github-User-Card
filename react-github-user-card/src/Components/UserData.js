@@ -14,7 +14,7 @@ class Profile extends React.Component {
 
     componentDidMount() {
         axios
-            .get(`https://api.github.com/users/${this.state.username}`)
+            .get(`https://api.github.com/users/danielcruz1`)
             .then(res => {
                 this.setState({
                     mydata: res.data,  
@@ -35,14 +35,32 @@ class Profile extends React.Component {
 
     handleNewUser = e => {
         e.preventDefault();
-
+        axios
+        .get(`https://api.github.com/users/${this.state.newUser}`)
+        .then(res => {
+            this.setState({
+                mydata: res.data,  
+            });
+            console.log(res.data);
+        })
+        .catch(err => {
+            console.log('NANI?!',err)
+        });
     }
-
 
 
     render() {
         return (
+            
             <div className='profile-container'>
+                <input
+                    className='search-bar'
+                    type="text"
+                    value={this.state.doggoText}
+                    onChange={this.handleChange}
+                />
+                <button onClick={this.handleNewUser}>Find User!</button>
+
                 <img src={this.state.mydata.avatar_url} alt={this.state.mydata.name} />
                 <h2>{this.state.mydata.name}</h2>
                 <h3>{this.state.mydata.login}</h3>

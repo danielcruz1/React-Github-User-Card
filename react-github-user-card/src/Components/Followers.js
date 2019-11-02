@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import UserData from './UserData';
 
 class Followers extends React.Component {
     constructor() {
