@@ -1,0 +1,50 @@
+.App {
+  text-align: center;
+  background-image: url('./Images/lion.jpg');
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center center;
+  margin-top: -21px;
+  color: #b3995d;
+}
+
+.App a {
+  text-decoration: none;
+  color: black;
+}
+
+.follower-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.follower-container img{
+  width: 350px;
+  border-radius: 10px;
+} 
+
+.search-bar {
+  margin-bottom: 20px;
+  margin-top: 15px;
+}
+
+.cards {
+  border:5px solid #aa0000;
+  background: #aa0000;
+  margin: 20px;
+  border-radius: 10px;
+}
+
+.profile-container{
+  border:5px solid #aa0000;
+  background: #aa0000;
+  border-radius: 10px;
+  width: 375px;
+  margin: 0 auto;
+} 
+
+.profile-container img{
+  width: 375px;
+  border-radius: 10px;
+}
