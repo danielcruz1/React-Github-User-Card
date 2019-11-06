@@ -56,7 +56,7 @@ class Profile extends React.Component {
                 <input
                     className='search-bar'
                     type="text"
-                    value={this.state.doggoText}
+                    value={this.state.newUser}
                     onChange={this.handleChange}
                 />
                 <button onClick={this.handleNewUser}>Find User!</button>
